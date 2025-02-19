@@ -1,21 +1,78 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root{
+    --primary1: #c6326c;
+    --primary2: #ce5671;
+    --secondary1: #dc959d;
+    --secondary2: #e7c4ca;
+
+    --fontBig: 7em; /*88 px*/
+    --fontxxxl: 5.5em; /*88 px*/
+    --fontxxl: 3.4375em; /*55 px*/
+    --fontxl: 2.75em; /*44 px*/
+    --fontlg: 1.9375em; /*31 px*/
+    --fontmd: 1.375em; /*22 px*/
+    --fontsm: 1.125em; /*18 px*/
+    --fontxs: 1em; /*16 px*/
+    --fontxxs: 0.75em; /*12 px*/
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme{
+    --color-primary1: #8c191c;
+    --color-primary2: #c82b34;
+    --color-secondary1: #ea868e;
+    --color-secondary2: #f4b9b9;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+/* COMMON */
+section{
+    width: 100%;
+    height: 100%;
+}
+section:not(.location) article{
+    min-height: 100vw;   
+}
+
+.parisienne {font-size: 1.6rem; font-weight: bold; text-align: center; font-family: 'Parisienne'; color: var(--primary1); padding-top: 8dvh; padding-bottom: 4dvh;}
+
+
+h3.subtitle1{
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.25rem;
+    padding-bottom: 2%;
+}
+
+.inner1{
+    padding: 0 5vw;
+}
+
+/* SWIPER */
+.prevBtn1{
+    font-size: 12px;
+    position: fixed;
+    left: 50%;
+    bottom: 15%;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .4);
+    z-index: 2;
+    cursor: pointer;
+    transform: translate(-50%,-50%);
+}
+article .nextBtn,article .prevBtn{
+    position: absolute;
+    top: 45%;
+    width: 5dvw;
+    z-index: 9;
+    cursor: pointer;
+}
+article .prevBtn{
+    left: 20%;
+}
+article .nextBtn{
+    right: 20%;
 }

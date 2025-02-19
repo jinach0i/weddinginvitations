@@ -10,7 +10,13 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        
+}
       },
+      fontFamily: {
+        seoulNamsan: ['var(--font-seoul-namsan)'],
+        parisienne: ['var(--font-parisienne)'],
+      }
     },
   },
   plugins: [],
